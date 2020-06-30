@@ -1,0 +1,14 @@
+1. 문제 페이지에 들어가보니 목록에 인증 페이지하고 컨텐츠 페이지가 있었다. 
+2. 컨텐츠 페이지의 url 뒷쪽에 order=ASC라고 되어 있어서 ' union select NULL--을 넣어봤더니 구문 오류가 떴다. 
+3. ;를 넣어서 쿼리를 만들어보니 attack detected라는 문구가 떴다.
+4. 줄바꿈을 hex인코딩으로 바꿔 url에 넣어보니 attack detected가 뜨지 않았다.
+5. url에 'a를 넣었더니 에러문구에 ''a로 표시가 됐다. 더블링이 쓰인 것 같음
+6. url에 in (select username from user where username='admin')을 넣었을 때 'admin'쪽에 에러가 났다.
+7. admin을 hex 인코딩 한 값을 넣은 후 다시 확인을 했을 때 username이라는 컬럼이 없다는 애러가 떴다.
+8. user를 users로 바꿔서 해보니 users라는 릴레이션이 없다는 에러가 떴다. -> user라는 테이블은 있다는 뜻
+9. url에 in (select * from user where uid=%61%64%6d%69%6e)를 넣었을 때 contents.id라는 컬럼이 노출됐다.
+11. in (select pass from user)를 넣어보니 pss라는 컬럼이 없다는 에러가 뜨면서 contents.page라는 컬럼이 노출됐다.
+
+===
+- cast 함수를 이용하여 코드를 형변환
+- cast 함수 알아보기

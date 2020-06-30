@@ -1,0 +1,14 @@
+1. login 폼에 1, 1을 넣어봤더니 no such user/password라는 에러가 떴다.
+2. accueil 페이지에서 url에 union select NULL--값을 넣었더니 칼럼 개수가 맞지 않다는 에러가 떴다.
+3. NULL 개수를 늘려서 union select NULL, NULL, NULL--을 넣었더니 에러가 띄지 않았다.
+4. 칼럼의 개수를 확인한 후 union select * from a를 넣었더니 테이블이 존재하지 않는다는 에러가 떴다.
+5. union select * from Users--를 넣었더니 문자열 3개가 나왔다.
+6. union select NULL, username, password from Users--를 넣었더니 admin을 포함한 username 3개와 password 3개가 나왔다.
+7. admin 비밀번호를 넣고 문제를 풀었다.
+
+===
+1. 정보를 출력해주는 게시판 찾기
+2. 에러 발생시키기
+3. 칼럼수 확인하기
+4. 테이블 확인하기
+5. 칼럼명 확인하기

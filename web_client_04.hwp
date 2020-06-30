@@ -1,0 +1,15 @@
+1. 워게임 페이지에 들어가보니 "authentication"이라는 문장 아래 login버튼이 있었고, 그 아래 close window라는 문장의 하이퍼 링크가 있었다.
+2. login버튼을 눌러보았더니 username을 치라는 입력창이 나왔다.
+3. 아무 값도 입력하지 않고 확인을 눌렀더니 password를 입력하라는 입력창이 나왔다.
+4. 아무 값도 입력하지 않고 확인을 눌렀더니 팝업탕이 사라지고 아무일도 일어나지 않았다.
+5. "close window"라는 말이 의미심장해서 하이퍼링크를 누르기 전에 페이지소스를 보았다.
+6. a 태그에 "javascript:window.close();"라는 링크가 되어있었다. 인터넷에 찾아보니 현재 페이지를 닫는 코드라고 나와있었다.
+7. 로그인 버튼의 onclick 속성에 connexion()이라는 함수가 있어서 login.js파일 소스를 봐보았다.
+8. login.js 코드를 해석한 후에 pw를 알아내서 문제를 풀었다.
+
+===
+- "javascript:window.close()": 현재 페이지를 닫는 자바스크립트 코드
+- 자바 스키립트 split()함수
+a = ["god:hidden"]
+b = a.split(":")
+b[0]="god"/ b[1]="hidden"

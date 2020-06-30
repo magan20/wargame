@@ -1,0 +1,20 @@
+1. 문제 페이지에 들어가자 home, register, administration 목록이 있었다.
+2. register 목록에서 1, 1을 쳐보았더니 "user alreadt in db or password too short(8 chars min)"이라는 문구가 떴다.
+3. 비밀번호를 11111111로 하고 pseudo 칸에 'administrator', 'admin'을 차례대로 쳤을 때 'admin' 계정이 이미 있었다.
+4. register 목록에서 페이지 소스를 보니 sql create 구문이 주석으로 달려 있었다.
+1111111111111
+11111111
+- '를 세개 넣고 등록을 했을 때 등록 안됨
+- '' 등록 됨
+- 'asd' 등록안됨
+- asd' 등록됨/ 'asd 등록됨
+- aaaaaa' 등록됨/ aaaaaaa' 등록안됨 -> '는 ''''''으로 변환됨
+
+login=' admin' '' '' ' '
+where username='aaaaaaaaaaa'' &password='
+insert
+'------------'
+id='aaaaaaaaaaa''&pw=''''''' '
+
+
+- admin               test/11111111를 등록하면 admin 계정이 2개가 된다. 이때 11111111값을 입력하면 flag값이 나온다.
